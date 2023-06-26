@@ -20,8 +20,8 @@ export default function Home({data}) {
             <div key = {dat.id}>
               <h4>{dat.humedad}</h4>
               <h4>{dat.temperatura}</h4>
-              <h4>{dat.x-pos}</h4>
-              <h4>{dat.y-pos}</h4>
+              <h4>{dat['x-pos']}</h4>
+              <h4>{dat['y-pos']}</h4>
               <h4>{dat.tag}</h4>
             </div>
           ))
@@ -33,8 +33,8 @@ export default function Home({data}) {
 }
 
 export const getServerSideProps = async (context)=>{
-//const options = {method: 'GET'};
-  const res = await fetch("http://bat-simple-api.vercel.app", options)
+  const options = {method: 'GET'};
+  const res = await fetch("https://bat-simple-api.vercel.app/data", options)
   const datos = await res.json() 
   
     return {
