@@ -18,11 +18,13 @@ export default function Home({data}) {
         {
           data.map(dat => (
             <div key = {dat.id}>
+              <h3>Numero de registro = {dat.id}</h3>
               <h4>humedad = {dat.humedad}</h4>
               <h4>temperatura = {dat.temperatura}</h4>
               <h4>posición en x = {dat['x-pos']}</h4>
               <h4>posición en y = {dat['y-pos']}</h4>
               <h4>{dat.tag}</h4>
+              
             </div>
           ))
         }
