@@ -1,8 +1,11 @@
 import Head from 'next/head'
 import Image from 'next/image'       
-import { Inter } from 'next/font/google'
+import { Inter, Fredoka } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
+import Menu from '@/components/Menu'
+/*import Busqueda from '@/components/busqueda' */
 
+const fredoka = Fredoka({ subsets: ['latin'], weight: '500' })
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home({data}) {
@@ -15,25 +18,25 @@ export default function Home({data}) {
         <link rel="icon" href="/LogoB.png"/> 
       </Head>   
 
-      <div className={styles.header}>
+      <div style={fredoka.style} className={styles.header}>
 
         <div className={styles.left}>
-          <a href="">menú</a>
-          <a href="">logo</a>
+          <a href=""><Menu width={24} height={23} /></a>
+          <a href=""> <img className={styles.logo} src="logo-datos.png"/></a>
         </div>
         <div className={styles.center}>
-          <a href="">nosotros</a>
-          <a href="">contacto</a>
-          <a href="">subscripción </a>
+          <a className={styles.nos} href="">NOSOTROS</a>
+          <a className={styles.cont} href="">CONTACTO</a>
+          <a className={styles.sub} href="">SUBSCRIPCIÓN</a>
         </div>
         <div className={styles.right}>
-          <a href="">log in</a>
-          <a href="">buscar</a>
+          <a className={styles.log} href="">Log In</a>
+          <a href=""><img className={styles.lupa} src="lupa.png"/></a>
         </div>
 
       </div>
 
-      <div>
+      <div className={styles.datos}>
         {
           data.map(dat => (
             <div key = {dat.id}>
