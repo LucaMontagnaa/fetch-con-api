@@ -1,6 +1,9 @@
+*{
+    background-color: black;
+}
 
 a {
-    color: #FFF;
+    color: #ffffffbd;
     text-decoration: none;
     margin: 15px;
     font-size: 14px;

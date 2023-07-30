@@ -21,7 +21,7 @@ export default function Home({data}) {
       <div style={fredoka.style} className={styles.header}>
 
         <div className={styles.left}>
-          <a href=""><Menu width={24} height={23} /></a>
+          <a href=""><Menu width={24} height={23}/></a>
           <a href=""> <img className={styles.logo} src="logo-datos.png"/></a>
         </div>
         <div className={styles.center}>

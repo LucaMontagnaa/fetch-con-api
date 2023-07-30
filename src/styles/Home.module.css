@@ -7,7 +7,7 @@
     position: absolute;
     top: 0px;
     left: 0px;
-    background-color: black;
+    background-color: #000000;
     width: 100vw;
     height: 10vh;
 }
@@ -18,6 +18,7 @@
     left: 0px;
     width: 100vw;
     height: 90vh;
+    color: white;
 }
 
 .logo{
@@ -27,6 +28,8 @@
 .lupa{
     height: 21px;
     padding: 5px;
+    padding-right: 10px;
+    padding-left: 0.1px;
 }
 
 .log{
@@ -39,12 +42,76 @@
     top: -7px;
 }
 
-.nos:hover::after {
+.nos::after{
     content: '';
-    height: 0;
-    width: 100%;
-    background-color: aqua;
+    height: 3px;
+    width: 6%;
+    background: rgb(53, 204, 141);
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: 18px;
+    left: 520px;
+    opacity: 0;
+    transition: all 0.2s;
+    pointer-events: none;
+    
 }
+
+.nos:hover{
+    color: white;
+    transition: all 0.2s;
+}
+
+.nos:hover::after ,
+.nos:focus:after{
+    opacity: 1;
+    
+}
+
+.cont::after {
+    content: '';
+    height: 3px;
+    width: 6%;
+    background: rgb(53, 204, 141);
+    position: absolute;
+    bottom: 18px;
+    left: 624px;
+    opacity: 0;
+    transition: all 0.2s;
+    pointer-events: none;
+}
+
+.cont:hover {
+    color: white;
+    transition: all 0.2s;
+}
+
+.cont:hover::after,
+.cont:focus:after {
+    opacity: 1;
+}
+
+.sub::after {
+    content: '';
+    height: 3px;
+    width: 105px;
+    background: rgb(53, 204, 141);
+    position: absolute;
+    bottom: 18px;
+    left: 727px;
+    opacity: 0;
+    transition: all 0.2s;
+    pointer-events: none;
+}
+
+.sub:hover {
+    color: white;
+    transition: all 0.2s;
+}
+
+.sub:hover::after,
+.sub:focus:after {
+    opacity: 1;
+}
+
+
+
