@@ -13,7 +13,7 @@
 }
 
 .datos {
-    position: absolute;
+    position: relative;
     top: 10vh;
     left: 0px;
     width: 100vw;
@@ -112,6 +112,23 @@
 .sub:focus:after {
     opacity: 1;
 }
+
+.resu{
+    text-align: center;
+    font-style: normal;   
+}
+
+.temp{
+    margin-left: 1150px;
+}
+
+.hum{
+    margin-left: 1150px;
+    
+}
+
+
+
 
 
 
