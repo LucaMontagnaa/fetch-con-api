@@ -113,6 +113,47 @@
     opacity: 1;
 }
 
+.derecha{
+    display: flexbox;
+    margin-left: 1100px;
+    margin-top: -110px;
+    position: absolute; 
+     
+}
+
+.resu{
+    text-align: center;   
+}
+
+.izquierda{
+    padding-left: 100px;
+    display: flexbox;
+    padding-top: 50px;
+
+}
+
+.num{
+    background-color: rgb(12, 12, 12);
+    padding: 60px;
+    width: 27%;
+    text-align: center;
+    border: 5px solid rgb(53, 204, 141);
+    border-radius: 50px;
+    
+}
+
+.ubi{
+
+    background-color: rgb(12, 12, 12);
+    padding: 60px;
+    width: 27%;
+    text-align: center;
+    border: 5px solid rgb(53, 204, 141);
+    border-radius: 50px;
+    
+}
+
+
 
 
 

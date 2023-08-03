@@ -3,10 +3,12 @@ import Image from 'next/image'
 import { Inter, Fredoka } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Menu from '@/components/Menu'
+import React from 'react';
+
 
 
 const fredoka = Fredoka({ subsets: ['latin'], weight: '500' })
-const inter = Inter({ subsets: ['latin'] })
+
 
 export default function Home({data}) {
   return (
@@ -41,26 +43,21 @@ export default function Home({data}) {
         {
           data.map(dat => (
             <div key = {dat.id}>
+
               <h2 className={styles.resu}> Resultados de trazabilidad</h2>
 
-              <div>
-                <h4> Numero de registro = {dat.id}</h4>
-                <h4> Posición en x = {dat['x-pos']} </h4>
-                <h4>{dat.tag}</h4>
+              <div className={styles.izquierda}>
+                <h4 className={styles.num}>Numero de registro {dat.id} </h4>
+                <h4 className={styles.ubi}>Ubicación{dat['x-pos']} </h4>                
               </div>
 
-              <div>
-                <h4> Temperatura = {dat.temperatura}</h4>
-                <h4> Humedad = {dat.humedad}</h4>   
-              </div>
-              
-                                     
+              <div className={styles.derecha}></div>
+
             </div>
           ))
-        }
-     </div>
-
+      }
     </div>
+  </div>
   )
 }
 
