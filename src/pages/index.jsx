@@ -51,8 +51,10 @@ export default function Home({data}) {
                 <div className={styles.card_registro}>
                   <img src="" alt="" />
                   <div className={styles.cuadrado}> Numero de registro</div>
-                  <div className={styles.cuadrado2}>{dat.id}</div>
-                  <img className={styles.clima} src="" alt="" /> 
+                  <div className={styles.cuadrado2}>{dat.id}
+                  <img className={styles.clima} src="soleado.png" alt="" /> 
+                  </div>
+                  
                 </div>
 
                 <div className={styles.card_ubicacion}>

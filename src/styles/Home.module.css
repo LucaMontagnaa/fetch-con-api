@@ -185,15 +185,20 @@
 }
 
 .gps{
-    height: 50px;
-    width: 55px;
+    height: 70px;
+    width: 75px;
     background-color: rgb(12, 12, 12) ;
     margin-left: 120px;
 }
 
 .clima{
-    
+    height: 50px;
+    width: 50px;
+    background-color: rgb(12, 12, 12) ;
+    margin-left: 120px;
 }
+
+
 
 
 
