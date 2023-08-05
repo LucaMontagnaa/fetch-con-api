@@ -134,82 +134,74 @@
 
 }
 
-.card_registro{
+.cardRegistro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex: 1;
     padding: 20px;
-    width: 27%;
-    text-align: center;    
-}
-
-.cuadrado{
-    border: 5px solid rgb(53, 204, 141);  
-    border-radius: 15px 15px 0px 0px;
-    padding: 5px;
-    width: 433px;
-    height: 15px;
-    background-color: rgb(53, 204, 141);
-}
-
-.cuadrado2{
-    padding: 30px;
+    width: 30vw;
+    height: 12vh;
+    border-radius: 15px;
+    background-color: dark;
     border: 5px solid rgb(53, 204, 141);
-    border-radius: 0px 0px 15px 15px;
-    background-color: rgb(12, 12, 12);
-    width: 112%;
-    height: 50px;
-
+    border-top: 50px solid rgb(53, 204, 141);
 }
 
+.tituloRegistro {
+    z-index: 5;
+    background-color: transparent;
+}
 
-.card_ubicacion{
+.textoRegistro {
+    font-weight: 800;
+    font-size: 30px;
+    background-color: transparent;
+}
+
+.soleado {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+}
+
+.cardGps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex: 1;
     padding: 20px;
-    width: 27%;
-    text-align: center;  
-}
-
-.square{
-    border: 5px solid rgb(53, 204, 141);  
-    border-radius: 15px 15px 0px 0px;
-    padding: 5px;
-    width: 433px;
-    height: 15px;
-    background-color: rgb(53, 204, 141);
-}
-
-.square2{
-    padding: 30px;
+    width: 30vw;
+    height: 12vh;
+    border-radius: 15px;
+    background-color: dark;
     border: 5px solid rgb(53, 204, 141);
-    border-radius: 0px 0px 15px 15px;
-    background-color: rgb(12, 12, 12);
-    width: 112%;
-    height: 50px;
+    border-top: 50px solid rgb(53, 204, 141);
+    text-align: center;
 }
 
-.gps{
-    height: 70px;
-    width: 75px;
-    background-color: rgb(12, 12, 12) ;
-    margin-left: 120px;
+.tituloGps {
+    background-color: transparent;
 }
 
-.clima{
-    height: 50px;
-    width: 50px;
-    background-color: rgb(12, 12, 12) ;
-    margin-left: 120px;
+.textoGps {
+    font-weight: 800;
+    font-size: 30px;
+    background-color: transparent;
 }
 
+.gps {
+    width: 80px;
+    height: 80px;
+    background-color: transparent;
+}
 
+.list {
+    list-style-type: none;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+.item {
+    margin: 50px;
+}

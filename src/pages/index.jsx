@@ -5,10 +5,7 @@ import styles from '@/styles/Home.module.css'
 import Menu from '@/components/Menu'
 import React from 'react';
 
-
-
 const fredoka = Fredoka({ subsets: ['latin'], weight: '500' })
-
 
 export default function Home({data}) {
   return (
@@ -47,22 +44,22 @@ export default function Home({data}) {
               <h2 className={styles.resu}> Resultados de trazabilidad</h2>
 
               <div className={styles.izquierda}>
-
-                <div className={styles.card_registro}>
-                  <img src="" alt="" />
-                  <div className={styles.cuadrado}> Numero de registro</div>
-                  <div className={styles.cuadrado2}>{dat.id}
-                  <img className={styles.clima} src="soleado.png" alt="" /> 
-                  </div>
-                  
-                </div>
-
-                <div className={styles.card_ubicacion}>
-                  <div className={styles.square}> Ubicación</div>
-                  <div className={styles.square2}>{dat.x_pos}
-                  <img className={styles.gps} src="ubicacion.jpg" alt="" /> 
-                  </div>
-                </div> 
+                <ul className={styles.list}>
+                  <li className={styles.item}>
+                    <div className={styles.cardRegistro}>
+                      <p className={styles.tituloRegistro}>Numero de registro</p>
+                      <p className={styles.textoRegistro}>{dat.id}</p>
+                      <Image src={'/soleado.png'} width={300} className={styles.soleado} height={300} />
+                    </div>
+                  </li>
+                  <li className={styles.item}>
+                    <div className={styles.cardGps}>
+                      <p className={styles.tituloGps}>Ubicacion</p>
+                      <p className={styles.textoGps}>{dat.id}</p>
+                      <Image src={'/ubicacion.jpg'} width={300} className={styles.gps} height={300} />
+                    </div>
+                  </li>
+                </ul>
 
               </div>
 
