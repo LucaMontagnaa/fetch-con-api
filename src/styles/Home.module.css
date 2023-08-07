@@ -1,5 +1,4 @@
 
-
 .header {
     justify-content: center;
     align-items: center;
@@ -9,19 +8,21 @@
     position: absolute;
     top: 0px;
     left: 0px;
-    background-color: #000000;
+    right: 0px;
+    background-color: #090909;
     width: 100vw;
     height: 10vh;
-    position: fixed;
+    position: fixed;  
 }
 
 .datos {
     position: relative;
-    top: 10vh;
-    left: 0px;
+    top: 7vh;
+    left: -2vh;
     width: 100vw;
     height: 90vh;
     color: white;
+    background-color:black;
 }
 
 .logo{
@@ -31,8 +32,9 @@
 .lupa{
     height: 21px;
     padding: 5px;
-    padding-right: 10px;
+    padding-right: 30px;
     padding-left: 0.1px;
+    
 }
 
 .log{
@@ -43,89 +45,44 @@
     padding-left: 20px;
     position: relative;
     top: -7px;
+    font-size: 15px;
+    font-weight: 500;
 }
 
-.nos::after{
-    content: '';
-    height: 3px;
-    width: 6%;
-    background: rgb(53, 204, 141);
-    position: absolute;
-    bottom: 18px;
-    left: 520px;
-    opacity: 0;
-    transition: all 0.2s;
-    pointer-events: none;
-    
+.log:hover{
+    color: rgb(53, 204, 141);
+   /* background-color: rgb(53, 204, 141);
+    color: white;
+    transition: all 0.2s;*/
 }
+
 
 .nos:hover{
     color: white;
     transition: all 0.2s;
 }
 
-.nos:hover::after ,
-.nos:focus:after{
-    opacity: 1;
-    
-}
-
-.cont::after {
-    content: '';
-    height: 3px;
-    width: 6%;
-    background: rgb(53, 204, 141);
-    position: absolute;
-    bottom: 18px;
-    left: 624px;
-    opacity: 0;
-    transition: all 0.2s;
-    pointer-events: none;
-}
 
 .cont:hover {
     color: white;
     transition: all 0.2s;
 }
 
-.cont:hover::after,
-.cont:focus:after {
-    opacity: 1;
-}
-
-.sub::after {
-    content: '';
-    height: 3px;
-    width: 105px;
-    background: rgb(53, 204, 141);
-    position: absolute;
-    bottom: 18px;
-    left: 727px;
-    opacity: 0;
-    transition: all 0.2s;
-    pointer-events: none;
-}
 
 .sub:hover {
     color: white;
     transition: all 0.2s;
 }
 
-.sub:hover::after,
-.sub:focus:after {
-    opacity: 1;
+.lupa:hover{
+    color: white;
 }
 
-.derecha{
-    display: flexbox;
-    margin-left: 1100px;
-    margin-top: -110px;
-    position: absolute; 
-     
-}
 
-.resu{
-    text-align: center;   
+.resu{ 
+    text-align: center;
+    text-decoration:overline red;
+    
 }
 
 .izquierda{
@@ -134,69 +91,95 @@
 
 }
 
-.card_registro{
+.cardRegistro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex: 1;
     padding: 20px;
-    width: 27%;
-    text-align: center;    
-}
-
-.cuadrado{
-    border: 5px solid rgb(53, 204, 141);  
-    border-radius: 15px 15px 0px 0px;
-    padding: 5px;
-    width: 433px;
-    height: 15px;
-    background-color: rgb(53, 204, 141);
-}
-
-.cuadrado2{
-    padding: 30px;
+    width: 30vw;
+    height: 12vh;
+    border-radius: 15px;
+    background-color: dark;
     border: 5px solid rgb(53, 204, 141);
-    border-radius: 0px 0px 15px 15px;
-    background-color: rgb(12, 12, 12);
-    width: 112%;
-    height: 50px;
+    border-top: 50px solid rgb(53, 204, 141);
+}
+
+.tituloRegistro {
+    background-color: transparent;
+    position: absolute;
+    top: 95px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.textoRegistro {
+    font-weight: 800;
+    font-size: 30px;
+    background-color: transparent;
+    position: relative;
+    left: -10vh;
 
 }
 
+.soleado {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    position: relative;
+    left: 10vh;
+}
 
-.card_ubicacion{
+.cardGps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex: 1;
     padding: 20px;
-    width: 27%;
-    text-align: center;  
-}
-
-.square{
-    border: 5px solid rgb(53, 204, 141);  
-    border-radius: 15px 15px 0px 0px;
-    padding: 5px;
-    width: 433px;
-    height: 15px;
-    background-color: rgb(53, 204, 141);
-}
-
-.square2{
-    padding: 30px;
+    width: 30vw;
+    height: 12vh;
+    border-radius: 15px;
+    background-color: dark;
     border: 5px solid rgb(53, 204, 141);
-    border-radius: 0px 0px 15px 15px;
-    background-color: rgb(12, 12, 12);
-    width: 112%;
-    height: 50px;
+    border-top: 50px solid rgb(53, 204, 141);
 }
 
-.gps{
-    height: 70px;
-    width: 75px;
-    background-color: rgb(12, 12, 12) ;
-    margin-left: 120px;
+.tituloGps {
+    background-color: transparent;
+    position: absolute;
+    top: 300px;
+    text-align: center;
+    font-size: 25px;
 }
 
-.clima{
-    height: 50px;
-    width: 50px;
-    background-color: rgb(12, 12, 12) ;
-    margin-left: 120px;
+.textoGps {
+    font-weight: 800;
+    font-size: 30px;
+    background-color: transparent;
+    position: relative;
+    left: -10vh;
 }
+
+.gps {
+    width: 80px;
+    height: 80px;
+    background-color: transparent;
+    position: relative;
+    left: 10vh;
+}
+
+.list {
+    list-style-type: none;
+}
+
+.item {
+    margin: 30px;
+}
+
+
+
 
 
 

@@ -4,6 +4,7 @@ import { Inter, Fredoka } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Menu from '@/components/Menu'
 import React from 'react';
+import Busqueda from '../../fetch-con-api/src/components/Busqueda'
 
 
 
@@ -33,7 +34,7 @@ export default function Home({data}) {
         </div>
         <div className={styles.right}>
           <a className={styles.log} href="">Log In</a>
-          <a href=""><img className={styles.lupa} src="lupa.png"/></a>
+          <a href="" className={styles.lupa}><Busqueda width={24} height={23}/></a>
         </div>
 
       </div>
@@ -44,29 +45,41 @@ export default function Home({data}) {
           data.map(dat => (
             <div key = {dat.id}>
 
-              <h2 className={styles.resu}> Resultados de trazabilidad</h2>
+    <div className={styles.datos}>
+      {
+          data.map(dat => (
+            <div key = {dat.id}>
+
+              <h2 style={fredoka.style} className={styles.resu}> Resultados de trazabilidad</h2>
 
               <div className={styles.izquierda}>
 
-                <div className={styles.card_registro}>
-                  <img src="" alt="" />
-                  <div className={styles.cuadrado}> Numero de registro</div>
-                  <div className={styles.cuadrado2}>{dat.id}
-                  <img className={styles.clima} src="soleado.png" alt="" /> 
-                  </div>
-                  
-                </div>
+                <ul className={styles.list}>
+                  <li className={styles.item}>
+                    <div className={styles.cardRegistro}>
+                      <p style={fredoka.style} className={styles.tituloRegistro}>Numero de registro</p>
+                      <p style={fredoka.style} className={styles.textoRegistro}>{dat.id}</p>
+                      <Image src={'/soleado.png'} width={300} className={styles.soleado} height={300} />
+                    </div>
+                  </li>
 
-                <div className={styles.card_ubicacion}>
-                  <div className={styles.square}> Ubicación</div>
-                  <div className={styles.square2}>{dat.x_pos}
-                  <img className={styles.gps} src="ubicacion.jpg" alt="" /> 
-                  </div>
-                </div> 
+                  <li className={styles.item}>
+                    <div className={styles.cardGps}>
+                      <p style={fredoka.style} className={styles.tituloGps}>Ubicación</p>
+                      <p style={fredoka.style} className={styles.textoGps}>{dat.id} </p>
+                      <Image src= {'/ubicacion.png'} width={300} className={styles.gps} height={300} />
+                    </div>
+                  </li>
+                </ul>
 
               </div>
 
-              <div className={styles.derecha}></div>
+              
+
+            </div>
+          ))
+      }
+    </div>
 
             </div>
           ))
@@ -87,3 +100,5 @@ export const getServerSideProps = async (context)=>{
      }
    }
 }
+
+
