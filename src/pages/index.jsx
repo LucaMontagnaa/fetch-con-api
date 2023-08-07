@@ -4,7 +4,7 @@ import { Inter, Fredoka } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Menu from '@/components/Menu'
 import React from 'react';
-import Busqueda from '../../fetch-con-api/src/components/Busqueda'
+import Busqueda from '@/components/Busqueda'
 
 const fredoka = Fredoka({ subsets: ['latin'], weight: '500' })
 
@@ -50,7 +50,6 @@ export default function Home({data}) {
               <h2 style={fredoka.style} className={styles.resu}> Resultados de trazabilidad</h2>
 
               <div className={styles.izquierda}>
-<<<<<<< HEAD
 
                 <ul className={styles.list}>
                   <li className={styles.item}>
@@ -66,21 +65,6 @@ export default function Home({data}) {
                       <p style={fredoka.style} className={styles.tituloGps}>Ubicación</p>
                       <p style={fredoka.style} className={styles.textoGps}>{dat.id} </p>
                       <Image src= {'/ubicacion.png'} width={300} className={styles.gps} height={300} />
-=======
-                <ul className={styles.list}>
-                  <li className={styles.item}>
-                    <div className={styles.cardRegistro}>
-                      <p className={styles.tituloRegistro}>Numero de registro</p>
-                      <p className={styles.textoRegistro}>{dat.id}</p>
-                      <Image src={'/soleado.png'} width={300} className={styles.soleado} height={300} />
-                    </div>
-                  </li>
-                  <li className={styles.item}>
-                    <div className={styles.cardGps}>
-                      <p className={styles.tituloGps}>Ubicacion</p>
-                      <p className={styles.textoGps}>{dat.id}</p>
-                      <Image src={'/ubicacion.jpg'} width={300} className={styles.gps} height={300} />
->>>>>>> 9251324f625331c3cde42c0675fd12b6110feba8
                     </div>
                   </li>
                 </ul>

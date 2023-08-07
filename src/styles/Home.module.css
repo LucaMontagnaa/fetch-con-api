@@ -1,18 +1,13 @@
 
 .header {
-    justify-content: center;
     align-items: center;
-    align-content: center;
     display: flex;
     justify-content: space-between;
-    position: absolute;
     top: 0px;
-    left: 0px;
-    right: 0px;
     background-color: #090909;
     width: 100vw;
     height: 10vh;
-    position: fixed;  
+    position: fixed;
 }
 
 .datos {
@@ -81,7 +76,7 @@
 
 .resu{ 
     text-align: center;
-    text-decoration:overline red;
+    text-decoration:underline rgb(255, 255, 255);
     
 }
 
@@ -187,6 +182,8 @@
 .list {
     list-style-type: none;
 }
+
+
 
 
 
