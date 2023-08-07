@@ -178,7 +178,15 @@
     margin: 30px;
 }
 
+.gps {
+    width: 80px;
+    height: 80px;
+    background-color: transparent;
+}
 
+.list {
+    list-style-type: none;
+}
 
 
 
