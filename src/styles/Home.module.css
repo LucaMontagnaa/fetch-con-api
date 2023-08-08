@@ -76,8 +76,8 @@
 
 .resu{ 
     text-align: center;
-    text-decoration:underline rgb(255, 255, 255);
-    
+    text-decoration:underline rgb(255, 255, 255); 
+    margin-top: 50px;
 }
 
 .izquierda{
@@ -128,10 +128,10 @@
 
 .cardGps {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     align-content: center;
-    flex: 1;
     padding: 20px;
     width: 30vw;
     height: 12vh;
@@ -149,12 +149,22 @@
     font-size: 25px;
 }
 
-.textoGps {
+.textoLatitud {
     font-weight: 800;
     font-size: 30px;
     background-color: transparent;
     position: relative;
-    left: -10vh;
+    left: -12vh;
+    top: 11vh;
+}
+
+.textoLongitud {
+    font-weight: 800;
+    font-size: 30px;
+    background-color: transparent;
+    position: relative;
+    left: -12vh;
+    top: 2vh;
 }
 
 .gps {
@@ -162,7 +172,8 @@
     height: 80px;
     background-color: transparent;
     position: relative;
-    left: 10vh;
+    left: 14vh;
+    top: -15vh;
 }
 
 .list {
@@ -171,12 +182,6 @@
 
 .item {
     margin: 30px;
-}
-
-.gps {
-    width: 80px;
-    height: 80px;
-    background-color: transparent;
 }
 
 .list {

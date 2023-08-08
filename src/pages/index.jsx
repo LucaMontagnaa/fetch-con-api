@@ -3,8 +3,8 @@ import Image from 'next/image'
 import { Inter, Fredoka } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Menu from '@/components/Menu'
+import Busqueda from '../components/Busqueda'
 import React from 'react';
-import Busqueda from '@/components/Busqueda'
 
 const fredoka = Fredoka({ subsets: ['latin'], weight: '500' })
 
@@ -35,13 +35,9 @@ export default function Home({data}) {
         </div>
 
       </div>
+
       
-
-      <div className={styles.datos}>
-      {
-          data.map(dat => (
-            <div key = {dat.id}>
-
+      
     <div className={styles.datos}>
       {
           data.map(dat => (
@@ -55,7 +51,7 @@ export default function Home({data}) {
                   <li className={styles.item}>
                     <div className={styles.cardRegistro}>
                       <p style={fredoka.style} className={styles.tituloRegistro}>Numero de registro</p>
-                      <p style={fredoka.style} className={styles.textoRegistro}>{dat.id}</p>
+                      <p style={fredoka.style} className={styles.textoRegistro}>N°{dat.id}</p>
                       <Image src={'/soleado.png'} width={300} className={styles.soleado} height={300} />
                     </div>
                   </li>
@@ -63,32 +59,26 @@ export default function Home({data}) {
                   <li className={styles.item}>
                     <div className={styles.cardGps}>
                       <p style={fredoka.style} className={styles.tituloGps}>Ubicación</p>
-                      <p style={fredoka.style} className={styles.textoGps}>{dat.id} </p>
+                      <p style={fredoka.style} className={styles.textoLatitud}>Latitud: {dat.latitud}</p>
+                      <p style={fredoka.style} className={styles.textoLongitud}>Longitud: {dat.longitud} </p>
                       <Image src= {'/ubicacion.png'} width={300} className={styles.gps} height={300} />
                     </div>
                   </li>
                 </ul>
 
               </div>
-
               
-
             </div>
           ))
       }
-    </div>
-
-            </div>
-          ))
-      }
-    </div>
+    </div> 
   </div>
   )
 }
 
 export const getServerSideProps = async (context)=>{
   const options = {method: 'GET'};
-  const res = await fetch("https://bat-simple-api.vercel.app/data", options)
+  const res = await fetch("https://next-app-api.vercel.app/api/camiones/caba-lp/sensores", options)
   const datos = await res.json() 
   
     return {
@@ -97,5 +87,3 @@ export const getServerSideProps = async (context)=>{
      }
    }
 }
-
-
