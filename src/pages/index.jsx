@@ -1,15 +1,17 @@
 import Head from 'next/head'
 import Image from 'next/image'       
-import { Inter, Fredoka } from 'next/font/google'
+import { Fredoka } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Menu from '@/components/Menu'
 import Busqueda from '../components/Busqueda'
 import React from 'react';
 
+
 const fredoka = Fredoka({ subsets: ['latin'], weight: '500' })
 
 export default function Home({data}) {
   return (
+    
     <div className={styles.body}>
       <Head>
         <title> B.A.T </title>
@@ -68,7 +70,8 @@ export default function Home({data}) {
 
               </div>
               
-            </div>
+              </div>
+            
           ))
       }
     </div> 

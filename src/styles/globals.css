@@ -1,5 +1,8 @@
 
 
+@tailwind components;
+@tailwind utilities;
+
 a {
     color: #ffffffbd;
     text-decoration: none;
@@ -7,7 +10,6 @@ a {
     font-size: 14px;
     font-style: normal;
     line-height: normal; 
-    
 }
 
 body {
